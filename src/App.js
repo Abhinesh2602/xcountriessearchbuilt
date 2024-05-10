@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import styles from "./App.module.css";
+import "./App.css";
 
 const URL = "https://restcountries.com/v3.1/all";
 
 function Country({ countryName, flag, alt }) {
   return (
-    <div className={styles.country}>
+    <div className="countryCard">
       <div>
-        <img className={styles.flag} src={flag} alt={alt} />
+        <img className="flag" src={flag} alt={alt} />
       </div>
-      <div className={styles.countryName}>{countryName}</div>
+      <div className="countryName">{countryName}</div>
     </div>
   );
 }
@@ -49,16 +49,16 @@ function App() {
   }, [value, countries]);
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <div>
         <input
-          className={styles.search}
+          className="search"
           type="text"
           value={value}
           onChange={handleChange}
         />
       </div>
-      <div className={styles.mapContainer}>
+      <div className="mapContainer">
         {filteredCountries.map((country) => (
           <Country
             countryName={country.name.common}

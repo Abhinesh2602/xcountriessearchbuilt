@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.country {
+.countryCard {
   border: solid rgb(49, 49, 49) 2px;
   border-radius: 0.5rem;
   height: 120px;
